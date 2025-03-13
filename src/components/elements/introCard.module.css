@@ -1,0 +1,33 @@
+.introCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 32px;
+    position: relative;
+    max-width: 500px;
+    height: fit-content;
+    backdrop-filter: blur(10px);
+    min-height: 260px;
+    opacity: 0;
+    border: #6320EE 2px solid;
+    transition: opacity 0.5s ease-in-out;
+    background: radial-gradient(94.38% 84.84% at 100% 98%, #6320EE 0%, rgba(255, 255, 255, 0) 80%), #181420;
+    border-radius: 10px; /* Add this line */
+}
+
+.introCard.visible {
+    opacity: 1;
+}
+
+.introNumber {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 3rem;
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    background: radial-gradient(#181420 40%, rgba(255, 255, 255, 0) 100%);
+    color: rgba(255, 255, 255, 0.5);
+}

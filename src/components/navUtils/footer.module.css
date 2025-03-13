@@ -1,0 +1,17 @@
+.line {
+    width: 100%;
+    border-top: 1px solid #393a3d;
+
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px
+}
+
+

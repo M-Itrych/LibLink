@@ -1,0 +1,118 @@
+.pricingCard {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: start;
+    backdrop-filter: blur(20px);
+    gap: 8px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    padding: 24px 48px;
+    width: 25%;
+    min-height: 600px;
+    transition: all 0.2s ease-in-out;
+}
+
+.special {
+    background: linear-gradient(-45deg, #6520ee, #0068a7, #0e7c7a);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+    border: none;
+
+
+    .checkMark {
+        filter: brightness(0%) invert(1);
+    }
+
+    .ad {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(40px, -10px) rotate(20deg);
+        background: #6320EE;
+        padding: 12px;
+        border-radius: 15px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        animation: pulse 1s ease infinite;
+    }
+
+    .btn {
+        background: #ffffff;
+        color: #181420;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(40px, -10px) rotate(20deg) scale(1);
+    }
+    50% {
+        transform: translate(40px, -10px) rotate(20deg) scale(1.1);
+    }
+    100% {
+        transform: translate(40px, -10px) rotate(20deg) scale(1);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 99% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.cardPrice {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.featureList {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+}
+
+.btn {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #181420;
+}
+
+.checkMark {
+    width: 24px;
+    height: 24px;
+}

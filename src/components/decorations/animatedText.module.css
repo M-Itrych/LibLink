@@ -1,0 +1,50 @@
+.animatedText {
+    background-image: linear-gradient(-45deg, #6520ee, #6520ee, #0e7c7a, #0068a7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 3s infinite linear;
+    background-size: 200% auto;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.blinkBorderRight {
+    position: relative;
+    padding-right: 10px;
+}
+
+.blinkBorderRight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    background-image: linear-gradient(-45deg, #0e7c7a, #0068a7, #6520ee);
+    background-size: 200% auto;
+    background-position: 0% 50%;
+    animation: gradientAnimation 1s infinite linear, blinkAnimation 1s infinite step-start;
+}
+
+
+@keyframes blinkAnimation {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 99% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

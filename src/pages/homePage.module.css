@@ -1,0 +1,86 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    gap: 16px;
+    height: 70vh;
+    transform: translateY(-40px);
+}
+
+.welcomeAnnouncement {
+    background: #ffffff14;
+    border: 1px solid #ffffff1f;
+    backdrop-filter: blur(24px);
+    height: 36px;
+    border-radius: 37px;
+    display: flex;
+    align-items: center;
+    padding-left: 43px;
+    padding-right: 43px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    width: fit-content;
+    text-decoration: none;
+    color: #fff;
+}
+
+.welcomeAnnouncement:hover {
+    background: linear-gradient(-45deg, #6520ee, #0068a7, #0e7c7a);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn {
+    text-decoration: none;
+    outline: none;
+    color: #ffffffd9;
+    background: #ffffff14;
+    padding: 12px 24px;
+    border-radius: 1.5rem;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #ffffff1f;
+    transition: all .3s;
+}
+
+.btnImportant {
+    background: #6320EE;
+}
+
+.btn:hover {
+    background: #393a3d;
+}
+
+.btnImportant:hover {
+    background: #6320EE;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 99% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+

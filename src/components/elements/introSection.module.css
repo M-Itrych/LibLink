@@ -1,0 +1,35 @@
+.introSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #fff;
+    width: 100%;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginBtn {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    width: fit-content;
+    text-align: center;
+    background: linear-gradient(-45deg, #6520ee, #0068a7, #0e7c7a);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+    border-radius: 15px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 99% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

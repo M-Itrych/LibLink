@@ -1,0 +1,85 @@
+.pricingButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+
+}
+
+.btn {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.42);
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    transition: transform .5s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btnActive {
+    color: #ffffff;
+    background-size: 200% auto;
+    animation: gradientAnimation 3s infinite linear;
+    border-bottom: 5px solid transparent;
+    border-image-source: linear-gradient(-45deg, #6520ee, #0e7c7a, #0068a7);
+    border-image-slice: 1;
+    border-image-repeat: stretch;
+    transform: scale(1.1);
+}
+
+.parentContainer {
+    position: relative;
+    min-height: 600px;
+}
+
+.pricingCards {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    will-change: opacity, transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.pricingCards.hidden {
+    opacity: 0;
+    transform: translateY(0);
+    pointer-events: none;
+}
+
+.pricingCards.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 99% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+
+
